@@ -55,7 +55,6 @@ has_field 'email' => (
 );
 
 sub validate_email {
-  my ($self) = @_;
   my ( $self, $field ) = @_;
   $self->email_avail( $field->value )
     or $field->add_error("That email is already in use.");
