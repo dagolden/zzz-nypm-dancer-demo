@@ -188,6 +188,11 @@ get_post '/register' => sub {
 };
 
 get '/confirm/:token' => sub {
+    # we don't want to act on HEAD requests
+    if ( request->is_head ) {
+      return '';
+    }
+
     unless ( params->{token} =~ /^[a-zA-Z0-9_=-]{32}$/ ) {
         return template 'page/error' => { error => "Invalid token" };
     }
