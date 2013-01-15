@@ -1,0 +1,42 @@
+# This is the main configuration file of your Dancer app
+# env-related settings should go to environments/$env.yml
+# all the settings in this file will be loaded at Dancer's startup.
+
+# Your application's name
+appname: nypm_demo
+
+# Must be the same as authorized at Postmark
+support_email: support@example.com
+
+# when the charset is set to UTF-8 Dancer will handle for you
+# all the magic of encoding and decoding. You should not care
+# about unicode within your app when this setting is set (recommended).
+charset: UTF-8
+
+template: xslate
+engines:
+  xslate:
+    cache_dir: .xslate_cache/
+    cache:     1
+    extension: tx
+    module:
+      - Text::Xslate::Bridge::TT2Like
+
+session: JSON
+session_dir: /tmp/nypm_demo_dancer_sessions
+
+plugins:
+  Mongoose:
+    user:
+      class: MyWeb::Model::User
+      database:
+        db_name: nypm_demo
+    token:
+      class: MyWeb::Model::Token
+      database:
+        db_name: nypm_demo
+  Adapter:
+    postmark:
+      class: WWW::Postmark
+      scope: singleton
+      options: POSTMARK_API_TEST

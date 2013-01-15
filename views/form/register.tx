@@ -1,0 +1,14 @@
+:cascade wrapper with macros, footer, error_bar, header, message_bar
+
+: around title -> {
+  Register
+:}
+
+: around pagestyle -> {}
+
+: around content -> {
+
+    <p class="lead">Sign up for the new, cool <: $settings.appname :>:</p>
+
+    <: $form.render | raw :>
+:}

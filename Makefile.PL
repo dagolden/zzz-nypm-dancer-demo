@@ -1,0 +1,50 @@
+use strict;
+use warnings;
+use ExtUtils::MakeMaker;
+
+WriteMakefile(
+    NAME         => 'nypm_demo',
+    AUTHOR       => q{YOUR NAME <youremail@example.com>},
+    VERSION_FROM => 'lib/MyWeb/App.pm',
+    ABSTRACT     => 'YOUR APPLICATION ABSTRACT',
+    ( $ExtUtils::MakeMaker::VERSION >= 6.3002
+        ? ( 'LICENSE' => 'perl' )
+        : () ),
+    PL_FILES  => {},
+    PREREQ_PM => {
+        'Authen::Passphrase::BlowfishCrypt'        => 0,
+        'Crypt::Diceware'                          => 0,
+        'Dancer'                                   => 1.3095,
+        'Dancer::Plugin::Adapter'                  => 0,
+        'Dancer::Plugin::Auth::Tiny'               => 0,
+        'Dancer::Plugin::Deferred'                 => 0,
+        'Dancer::Plugin::Mongoose'                 => 0,
+        'Dancer::Plugin::Syntax::GetPost'          => 0,
+        'Dancer::Session::JSON'                    => 0,
+        'Data::Entropy::Algorithms'                => 0,
+        'HTML::FormHandler'                        => 0,
+        'HTML::FormHandler::Moose'                 => 0,
+        'HTML::FormHandler::Render::Util'          => 0,
+        'HTML::FormHandler::Widget::Block'         => 0,
+        'HTML::FormHandler::Widget::Wrapper::Base' => 0,
+        'MIME::Base64'                             => 0,
+        'Mongoose::Document'                       => 0,
+        'Moose'                                    => 2,
+        'Moose::Role'                              => 0,
+        'Moose::Util::TypeConstraints'             => 0,
+        'MooseX::Aliases'                          => 0,
+        'MooseX::Types::Email::Loose'              => 0,
+        'Plack'                                    => 0,
+        'Test::More'                               => 0,
+        'Text::Xslate'                             => 0,
+        'Text::Xslate::Bridge::TT2Like'            => 0,
+        'WWW::Postmark'                            => 0,
+        'YAML'                                     => 0,
+        'autodie'                                  => 2.00,
+        'namespace::autoclean'                     => 0,
+        'strict'                                   => 0,
+        'warnings'                                 => 0,
+    },
+    dist  => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
+    clean => { FILES    => 'bunchmail_web-*' },
+);

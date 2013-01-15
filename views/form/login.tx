@@ -1,0 +1,16 @@
+:cascade wrapper with macros, footer, error_bar, header
+
+: around title -> {
+  Log in
+:}
+
+: around pagestyle -> {}
+
+: around content -> {
+
+    <p class="lead">Enter your username and password to sign in</p>
+
+    <:$form.render | raw :>
+
+    <p><a href="<: $request.uri_base :>/forgot">Forgot your password?</a></p>
+:}

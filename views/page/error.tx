@@ -1,0 +1,13 @@
+:cascade wrapper with macros, footer, header, message_bar
+
+: around title -> {
+  Error
+:}
+
+: around pagestyle -> {}
+
+: around content -> {
+
+    <p class="lead text-error">Error: <: $error :></span></p>
+
+:}

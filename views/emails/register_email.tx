@@ -1,0 +1,10 @@
+Hello,
+
+Thank you for signing up for <: $settings.appname :>.
+
+Clicking the link below will verify your email adddress:
+
+  <: $token_url :>
+
+If you did not register with <: $settings.appname :> , please disregard
+this email.

@@ -1,0 +1,3 @@
+: macro stylesheet -> $file {
+  <link rel="stylesheet" href="<: $request.uri_base :>/static/css/<: $file :>.css">
+: }

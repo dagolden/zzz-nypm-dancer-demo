@@ -1,0 +1,20 @@
+: before content -> {
+
+  <div class="masthead row">
+    <div class="span3 pull-right">
+      <ul class="nav nav-pills">
+          : if $user {
+            <li><a href="<: $request.uri_base :>/change_password">Change password</a></li>
+            <li><a href="<: $request.uri_base :>/logout">Logout <: $user :></a></li>
+          : } else {
+            <li><a href="<: $request.uri_base :>/login">Login</a></li>
+          : }
+      </ul>
+    </div>
+    <div class="span3">
+      <p class="lead"><a href="<: $request.uri_base :>/"><: $settings.appname :></a></p>
+    </div>
+  </div>
+
+  <hr>
+:}

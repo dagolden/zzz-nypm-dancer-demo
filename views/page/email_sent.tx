@@ -1,0 +1,18 @@
+:cascade wrapper with macros, footer, header, message_bar
+
+: around title -> {
+  Email sent
+:}
+
+: around pagestyle -> {}
+
+: around content -> {
+
+    <p class="lead">We sent an email to <span class="text-info"><: $rcpt_email :></span>
+    with your <: $token_type :> link.</p>
+
+    <p class="lead">Please click the link in the email or paste it into your browser.</p>
+
+    <a class="btn" href="<: $go_back_url :>"><: $go_back_text :></a>
+
+:}

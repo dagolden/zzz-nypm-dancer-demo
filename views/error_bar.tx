@@ -1,0 +1,10 @@
+: before content -> {
+
+: if $vars.error {
+    <div class="alert alert-error">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <: $vars.error :>
+    </div>
+: }
+
+: }

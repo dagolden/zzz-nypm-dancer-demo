@@ -1,0 +1,15 @@
+:cascade wrapper with macros, footer, error_bar, header, message_bar
+
+: around title -> {
+  Forgot password
+:}
+
+: around pagestyle -> {}
+
+: around content -> {
+
+    <p class="lead">Lost your password?<br>
+    Tell us your username or email to reset your password.</p>
+
+    <: $form.render | raw :>
+:}

@@ -1,0 +1,67 @@
+:cascade wrapper with macros, footer, header, message_bar
+
+: around title -> {}
+
+: around pagestyle -> {
+  : stylesheet("index")
+:}
+
+: around content -> {
+
+    <div class="jumbotron">
+      <h1>Hello World</h1>
+      <p class="lead">Are you desperate for the latest and greatest website in the world?</p>
+      : if $user {
+      <p class="lead">Now you're here!</p>
+      : } else {
+      <a class="btn btn-warning" href="<: $register_url :>">Sign up today</a>
+      : }
+    </div>
+
+    <hr>
+
+    <div class="row-fluid marketing">
+      <div class="span4">
+        <h4>Don't miss out!</h4>
+
+        <p>This site is the greatest thing ever! If you don't sign up now, you'll never
+        know what the big deal is!</p>
+
+      </div>
+
+      <div class="span4">
+        <h4>All your friends are here!</h4>
+
+        <p>Really, we promise!  And if not, we'll spam them until they join!</p>
+
+      </div>
+
+      <div class="span4">
+        <h4>Everyone is doing it!</h4>
+
+        <p>Forget what your mom said, if everyone else is doing it, so should you!</p>
+
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row-fluid marketing">
+      <div class="span12">
+        <h4>Now with new awesome-sauce included!</h4>
+
+        Mmmmmm!  Awesome-sauce!
+
+      </div>
+    </div>
+
+    <div class="row-fluid marketing">
+      <div class="span12">
+        <p class="centered">
+          <a href="http://perldancer.org">
+            <img src="<: $request.uri_base :>/static/images/dancer_man.png" title="Perl Dancer" alt="Perl Dancer">
+          </a>
+        </p>
+      </div>
+    </div>
+:}

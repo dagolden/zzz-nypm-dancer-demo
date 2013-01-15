@@ -1,0 +1,11 @@
+: after content -> {
+    <hr>
+
+  <div class="row">
+    <div class="pull-right">
+      <ul class="nav nav-pills">
+        <li class="disabled"><a href="#">&copy; <: $settings.appname :></></li>
+      </ul>
+    </div>
+  </div>
+:}
