@@ -34,7 +34,7 @@ Once all dependencies are installed, use the 'plackup' command:
 
 Then browse to the web page indicated in the console, typically http://0:5000/
 
-## Sources:
+## Sources
 
 All sources included are subject to their own open-source license terms:
 
