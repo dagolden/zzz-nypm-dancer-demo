@@ -21,6 +21,7 @@ WriteMakefile(
         'Dancer::Plugin::Mongoose'                 => 0,
         'Dancer::Plugin::Syntax::GetPost'          => 0,
         'Dancer::Session::JSON'                    => 0,
+        'Dancer::Template::Xslate'                 => 0,
         'Data::Entropy::Algorithms'                => 0,
         'HTML::FormHandler'                        => 0,
         'HTML::FormHandler::Moose'                 => 0,

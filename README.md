@@ -24,7 +24,9 @@ out repository directory.
     $ cpanm --installdeps .
 
 You will also need to [install MongoDB](http://docs.mongodb.org/manual/installation/) on your
-system.
+system.  (Note that as of this writing, the MongoDB Perl driver is version 0.503.3
+and requires MongoDB version 2.2.2 to pass tests.  It should be OK to force install
+if you have an older MongoDB.)
 
 ## Running the demo
 
